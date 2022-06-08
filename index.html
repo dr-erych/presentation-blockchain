@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Blockchain Vorlesung</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -16,8 +16,388 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-markdown>
+          <textarea data-template>
+            # Die Blockchain
+            ### Und wie sie verwendet wird
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Bitcoin
+            #### Die erste Blockchain
+          </textarea>
+        </section>
+        <section data-markdown data-background="darkgreen">
+          <textarea data-template>
+            ## Warum wurde Bitcoin erfunden?
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Probleme im Geldsystem
+            <small>die Bitcoin lösen möchte</small>
+            * Das „Fiat“-Geldsystem ist zentral gesteuert <!-- .element: class="fragment" -->
+            * „Fiat“ = „Es werde“ <!-- .element: class="fragment" -->
+            * Zentralbanken und Politik nehmen Einfluss <!-- .element: class="fragment" -->
+            * Mehr Geld kann einfach gedruckt werden <!-- .element: class="fragment" -->
+            * Inflation 🤑🤑🤑 <!-- .element: class="fragment" -->
+            * Autoritäre Regime können Geld konfiszieren <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Technische Probleme
+            <small>die Bitcoin lösen möchte</small>
+            * Digitale Daten können kopiert werden <!-- .element: class="fragment" -->
+            * Problem des <!-- .element: class="fragment" --> **Double Spending**
+            * Zentrale Datenbanken beruhen auf Vertrauen <!-- .element: class="fragment" -->
+            * Intl. Transaktionen sind kompliziert & teuer <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown data-background="orange  ">
+          <textarea data-template>
+            ## Wer hat's erfunden?
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Satoshi Nakamoto
+            <small>Der/die Erfinder von Bitcoin</small>
+            * Hat 2008 das Bitcoin Whitepaper veröffentlicht <!-- .element: class="fragment" -->
+            * 2009 die erste Version des Bitcoin Core <!-- .element: class="fragment" -->
+            * Identität ungeklärt, Einzelperson oder Personengruppe? <!-- .element: class="fragment" -->
+            * Seit 2011 untergetaucht oder verstorben <!-- .element: class="fragment" -->
+            * Wäre heute einer der reichsten Menschen <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+				<section data-markdown>
+          <textarea data-template>
+            ## Was ist eine Blockchain?
+            * Dezentrale Datenbank für Transaktionen <!-- .element: class="fragment fragment-1" -->
+            * Nicht von einer Firma oder Regierung verwaltet <!-- .element: class="fragment fragment-1" -->
+            * In einem Peer-to-peer-Netzwerk <!-- .element: class="fragment" -->
+            * Gesamte Transaktionshistorie wird erfasst <!-- .element: class="fragment" -->
+            * Jeder Teilnehmer hat eine Kopie der Blockchain <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Wofür ist sie geeignet?
+            * Transaktionen zwischen zwei Parteien,
+              die verifizierbar und unveränderbar sein müssen: <!-- .element: class="fragment" -->
+              * Verträge <!-- .element: class="fragment" -->
+              * Geistiges Eigentum <!-- .element: class="fragment" -->
+              * Identifizierungen <!-- .element: class="fragment" -->
+              * Cryptowährungen <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Wie funktioniert sie?
+            * Teilnehmende Computer heißen Nodes <!-- .element: class="fragment" -->
+            * Jeder kann teilnehmen <!-- .element: class="fragment" -->
+            * Jeder Node hat eine Kopie der ganzen Blockchain <!-- .element: class="fragment" -->
+            * Nodes validieren die Blockchain <!-- .element: class="fragment" -->
+            * Distributed trust model <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Wie funktioniert sie?
+            * Konsens: Gesamtes Netzwerk stimmt einer gemeinsamen Realität zu <!-- .element: class="fragment" -->
+            * Jede Transaktion wird für immer gespeichert und an alle verteilt <!-- .element: class="fragment" -->
+              * Verlauf kann nicht verändert werden <!-- .element: class="fragment" -->
+              * Kann nicht zweimal getätigt werden <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Und was ist jetzt ein Block?
+            * Transaktionen werden gesammelt <!-- .element: class="fragment" -->
+            * Validiert <!-- .element: class="fragment" -->
+            * In Blöcke zusammengefasst <!-- .element: class="fragment" -->
+            * Und an die Blockchain angehängt <!-- .element: class="fragment" -->
+            * Definierte Maximalgröße<br> <!-- .element: class="fragment" -->
+              <small>Bei Bitcoin: 1 MB</small>
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Wie werden die Blöcke verkettet?
+            * Jeder Block enthält einen Hash des vorherigen Blocks <!-- .element: class="fragment" -->
+            * Dadurch: <!-- .element: class="fragment" -->
+              * Reihenfolge fix <!-- .element: class="fragment" -->
+              * Alte Blöcke nicht veränderbar<br> <!-- .element: class="fragment" -->
+                <small>(Außer man würde alle nachfolgenden Blöcke neu erstellen)</small> <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Mining
+            <small>Beispiel: **Bitcoin-Blockchain**</small>
+            * Miner sammeln neue Transaktionen <!-- .element: class="fragment" -->
+            * ... und validieren sie, <!-- .element: class="fragment" -->
+            * ... packen sie in einen neuen Block <!-- .element: class="fragment" -->
+            * ... und hängen ihn an die Blockchain an. <!-- .element: class="fragment" -->
+            * Miner behält die Transaction Fee <!-- .element: class="fragment" -->
+            * und darf sich dzt. 6,25 neue BTC pro Block erstellen. <!-- .element: class="fragment" -->
+            * Broadcastet den neuen Block ans Netzwerk. <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Probleme
+            * Jeder, der will, darf minen. <!-- .element: class="fragment" -->
+            * Die Miner stehen in einem Wettbewerb zueinander. <!-- .element: class="fragment" -->
+            * Welche Minerin darf den nächsten Block anhängen? <!-- .element: class="fragment" -->
+            * Wenn das immer der gleiche Miner wäre, könnte er: <!-- .element: class="fragment" -->
+              * Ungültige Transaktionen tätigen <!-- .element: class="fragment" -->
+              * Alte Blöcke verändern (und alle danach neu minen) <!-- .element: class="fragment" -->
+              * Damit Transaktionen rückgängig machen oder verändern <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Herausforderungen
+            * Es sollte zu teuer sein, zu betrügen. <!-- .element: class="fragment" -->
+            * Es muss genug Zeit sein, die Blöcke weltweit zu broadcasten.<br> <!-- .element: class="fragment" -->
+              <small>Bei Bitcoin: ca. 10 Minuten</small> <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown data-background="linear-gradient(to bottom, #FE7F2D, black)">
+          <textarea data-template>
+            ## Proof of work
+            <small>Beispiel: **Bitcoin-Mining**</small>
+            * Alle Miner versuchen andauernd den nächsten Block zu generieren. <!-- .element: class="fragment" -->
+            * Jeder Block enthält einen Hash von sich selbst. <!-- .element: class="fragment" -->
+            * Difficulty: Die Bitcoin-Software legt fest, mit wie vielen Nullen dieser Hash beginnen muss. <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown data-background="linear-gradient(to bottom, #FE7F2D, black)">
+          <textarea data-template>
+            * Der Miner hängt eine Nonce an den Block an und hasht.
+            * Er verändert die Nonce und hasht so lange, bis er einen Hash gefunden hat, der mit ausreichend Nullen beginnt. <!-- .element: class="fragment" -->
+            * Der erste Miner, der einen Hash gefunden hat, der die Difficulty erfüllt, darf den Block an die Blockchain anhängen. <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown data-background="linear-gradient(to bottom, #81a6f7, black)">
+          <textarea data-template>
+            ### Proof of stake
+            <small>Beispiele: **Solana**, **Cardano**</small>
+            * Es gibt keine Miner, sondern Validatoren. <!-- .element: class="fragment" -->
+            * Wer den nächsten Block validieren und an die Blockchain hängen möchte, muss Coins staken. <!-- .element: class="fragment" -->
+            * Staken = Coins hinterlegen/sperren (ähnlich einer Kaution). <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown data-background="linear-gradient(to bottom, #81a6f7, black)">
+          <textarea data-template>
+            * Wer am meisten staked (oder am längsten gestaked hat etc.), kommt wahrscheinlicher zum Zug.
+            * Bspw. Cardano hat zusätzlich einen Zufallsmechanismus, der wohlhabendere Staker nicht immer bevorzugt. <!-- .element: class="fragment" -->
+            * Belohnung: Transaktionsgebühren, keine neuen Coins <!-- .element: class="fragment" -->
+            * Wer invalide Transaktionen in den Block aufnimmt, verliert seine gestakten Coins (oder einen Teil davon). <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown data-background="linear-gradient(to bottom, #FE7F2D, black)">
+          <textarea data-template>
+            ### Proof of work
+            #### Nachteile
+            * Kostet viel Energie <!-- .element: class="fragment" -->
+            * Inzwischen so viel Energie nötig, dass es sich in als z.B. europäischer Stromkunde nicht lohnt. <!-- .element: class="fragment" -->
+            * Um mitzuhalten, eigene Hardware (ASICs) und billiger Strom nötig (z.B. Überschüsse von Solar- oder Windkraftwerken) <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown data-background="linear-gradient(to bottom, #FE7F2D, black)">
+          <textarea data-template>
+            ### Proof of work
+            #### Vorteile
+            * Etabliertester Mechanismus <!-- .element: class="fragment" -->
+            * Bisher allen Angriffen standgehalten <!-- .element: class="fragment" -->
+            * Man benötigt kein Bitcoin-Vermögen, um mitmachen zu können. <!-- .element: class="fragment" -->
+            * Hoher Energieaufwand (= hohe Kosten) schützen die Blockchain. <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown data-background="linear-gradient(to bottom, #81a6f7, black)">
+          <textarea data-template>
+            ### Proof of stake
+            #### Nachteile
+            * Man benötigt bereits vorab Coins, um staken zu können. <!-- .element: class="fragment" -->
+            * Pre-Mining nötig (oder Vorab-Verteilung von Startguthaben) <!-- .element: class="fragment" -->
+            * Wer großes Coin-Vermögen hat, wird bevorzugt. <!-- .element: class="fragment" -->
+              * (In welcher Form genau, hängt vom Algorithmus der jew. Blockchain ab.) <!-- .element: class="fragment" -->
+            * "Nothing at stake" Problem <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown data-background="linear-gradient(to bottom, #81a6f7, black)">
+          <textarea data-template>
+            ### Proof of stake
+            #### Vorteile
+            * Wesentlich niedrigerer Energieaufwand <!-- .element: class="fragment" -->
+            * Keine spezielle Hardware nötig <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown data-background="linear-gradient(to bottom, #81a6f7, black)">
+          <textarea data-template>
+            ### Proof of stake
+            #### Fun fact
+            Ethereum wird mit Ethereum 2.0 von Proof of Work auf Proof of Stake umsteigen.
+
+            Der Release ("The Merge") wurde schon mehrfach verschoben. Derzeit ist 2023 angepeilt. <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ### 51% Attacke
+            * PoW: Wer mehr als 50% der Hashing Power besitzt <!-- .element: class="fragment" -->
+            * PoS: Wer mehr als 50% der gestakten Coins besitzt <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ### 51% Attacke
+            * Mehrere valide Blöcke gleichzeitig sind möglich <!-- .element: class="fragment" -->
+            * Dadurch verschiedene Zweige der Blockchain <!-- .element: class="fragment" -->
+            * "One True Chain": Die längste Kette wird von den Nodes akzeptiert <!-- .element: class="fragment" -->
+            * Wer schneller Blöcke erzeugen kann, als alle anderen Miner/Validatoren, kann bestehende Blöcke "überschreiben" <!-- .element: class="fragment" -->
+            * Damit Transaktionen "löschen" und z.B. noch einmal ausgeben. <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            # Wallets & Transaktionen
+            ## Am Beispiel Bitcoin
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Bitcoin-Wallet
+            #### Vereinfacht
+            * Besteht aus Public/Private Key Pair <!-- .element: class="fragment" -->
+            * Generiert Adresse(n) aus dem Public Key <!-- .element: class="fragment" -->
+            * Mit Hilfe des Private Key kann man beweisen, dass man die Adresse besitzt. <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Typen von Wallets
+            * Custodial Wallets (z.B. bei einer Börse) <!-- .element: class="fragment" -->
+              * "Not your keys, not your coins" <!-- .element: class="fragment" -->
+            * Paper Wallets <!-- .element: class="fragment" -->
+            * Software Wallets <!-- .element: class="fragment" -->
+            * Hardware Wallets <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Bitcoin-Transaktionen
+            #### Konzept
+            * Alice erstellt Transaktion "Betrag XY von meiner Adresse an eine Adresse von Bob" <!-- .element: class="fragment" -->
+            * Transaktion wird von Miner in die Blockchain geschrieben <!-- .element: class="fragment" -->
+            * Bob erstellt neue Transaktion um den Betrag auszugeben<br> <!-- .element: class="fragment" -->
+              <span>und signiert sie mit seinem Private Key.</span><!-- .element: class="fragment" -->
+            * So beweist Bob, die Adresse zu besitzen. <!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Bitcoin-Transaktion
+            #### Technisch
+            * Inputs: UTXOs (Unspent Transaction Outputs)<!-- .element: class="fragment" -->
+            * Outputs: Scripts (Legt fest, was nötig ist, um die BTC wieder auszugeben)<!-- .element: class="fragment" -->
+            * Script-Möglichkeiten bei Bitcoin begrenzt.<!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            # Smart Contracts
+            ## Am Beispiel Ethereum
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Smart Contract
+            * Ein Smart Contract ist ein Programm, das auf einem Blockchain-Account sitzt. <!-- .element: class="fragment" -->
+            * Legt Regeln fest, was passiert, wenn gewisse Konditionen auf der Blockchain eintreten.<!-- .element: class="fragment" -->
+            * Jeder, der möchte, kann einen Smart Contract programmieren und ihn in die Blockchain deployen. <!-- .element: class="fragment" -->
+            * Einfachstes Beispiel: Verkaufsautomat<!-- .element: class="fragment" -->
+              * Kondition: Transaktion mit gewissem Wert an ETH geht an den Account des Smart Contracts<!-- .element: class="fragment" -->
+              * Aktion: Token wird an den Sender überwiesen<!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Tokens
+            * Mit Hilfe von Smart Contracts können Tokens erstellt werden. <!-- .element: class="fragment" -->
+            * Tokens sind (vereinfacht) Cryptowährungen ohne eigene Blockchain. <!-- .element: class="fragment" -->
+            * Smart Contract muss die nötigen Methoden implementieren:<!-- .element: class="fragment" --> <small style="vertical-align: baseline">name, balanceOf, totalSupply, transfer ...</small><!-- .element: class="fragment" -->
+            * Die Tokens werden mittels Transaktionen von einem Account auf den anderen verschoben/verkauft.<!-- .element: class="fragment" -->
+            * Besitznachweis mittels Private Key.<!-- .element: class="fragment" -->
+
+            <div class="fragment" style="margin-top: 40px">
+              <small>Siehe: <a href="https://ethereum.org/en/developers/docs/standards/tokens/erc-20/" target="_blank">ERC-20 TOKEN STANDARD</a></small>
+            </div>
+          </textarea>
+          
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Non-fungible Tokens (NFT)
+            * Normale Tokens sind fungible (austauschbar) <!-- .element: class="fragment" -->
+            * NFTs sind dagegen einzigartig (zumindest eine einzigartige ID) <!-- .element: class="fragment" -->
+            * Der Ersteller des NFT legt die Knappheit (Gesamtanzahl) fest. <!-- .element: class="fragment" -->
+            * NFTs werden mittels Transaktionen von einem Account auf den anderen verschoben/verkauft. <!-- .element: class="fragment" -->
+            * Besitznachweis mittels Private Key.<!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Non-fungible Tokens (NFT)
+            * NFTs können externe Assets repräsentieren, z.B.<!-- .element: class="fragment" -->
+              * Digiale Kunst (Digitale Bilder, Musik, Videos ...)<!-- .element: class="fragment" -->
+              * Echte Gegenstände (Eigentumsrechte eines Autos, Konzert-Tickets, legale Dokumente)<!-- .element: class="fragment" -->
+            * Die digitalen Assets können weiterhin kopiert werden. (Nur das Token ist eindeutig.)<!-- .element: class="fragment" -->
+            * Jemand könnte ein NFT auf einer anderen Blockchain erstellen, das das gleiche Asset repräsentiert.<!-- .element: class="fragment" -->
+             
+            <div class="fragment" style="margin-top: 40px">
+              <small>Siehe: <a href="https://ethereum.org/en/nft/" target="_blank">Ethereum Use Cases - NFT</a></small>
+            </div>
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            # Ist das schon alles?
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Altcoins oder Shitcoins?
+            * Es gibt derzeit mehr als 10.000 verschiedene Cryptowährungen<!-- .element: class="fragment" -->
+              * Eigens entwickelte Blockchains (Ethereum, Binance, Cardano)<!-- .element: class="fragment" -->
+              * Forks von z.B. Bitcoin (Bitcoin Cash, eCash)<!-- .element: class="fragment" -->
+              * Tokens auf Basis von Smart Contracts (Shiba Inu, Tether)<!-- .element: class="fragment" -->
+            * Marktkapitalisierung: <!-- .element: class="fragment" --> [Coinmarketcap](https://coinmarketcap.com/)
+            * Technologie als Basis für Anwendungen<!-- .element: class="fragment" -->
+            * oder Revolution des Geldsystems?<!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Zukunft
+            ### Ethereum<!-- .element: class="fragment" -->
+            * Plattform für zahlreiche Anwendungen<!-- .element: class="fragment" -->
+            * Nicht ganz so dezentral wie Bitcoin<!-- .element: class="fragment" -->
+            * Vermutlich bald auf Proof of Stake umgestellt<!-- .element: class="fragment" -->
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ### Bitcoin<!-- .element: class="fragment" -->
+            * Es wird maximal 21 Millionen Bitcoin geben<!-- .element: class="fragment" -->
+            * Mining reward wird ca. alle 4 Jahre halbiert<!-- .element: class="fragment" -->
+            * Ca. 2140 wird der letzte Satoshi (= 0,00000001 BTC) gemint<!-- .element: class="fragment" -->
+            * Skalierungsproblem -> Lightning Network ⚡<!-- .element: class="fragment" -->
+          </textarea>
+        </section>
 			</div>
 		</div>
 
