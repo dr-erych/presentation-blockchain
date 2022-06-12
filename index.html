@@ -122,15 +122,33 @@
               <small>Bei Bitcoin: 1 MB</small>
           </textarea>
         </section>
-        <section data-markdown>
-          <textarea data-template>
-            ## Wie werden die Blöcke verkettet?
-            * Jeder Block enthält einen Hash des vorherigen Blocks <!-- .element: class="fragment" -->
-            * Dadurch: <!-- .element: class="fragment" -->
-              * Reihenfolge fix <!-- .element: class="fragment" -->
-              * Alte Blöcke nicht veränderbar<br> <!-- .element: class="fragment" -->
-                <small>(Außer man würde alle nachfolgenden Blöcke neu erstellen)</small> <!-- .element: class="fragment" -->
-          </textarea>
+        <section>
+          <section data-markdown>
+            <textarea data-template>
+              ## Wie werden die Blöcke verkettet?
+              * Jeder Block enthält einen <a href="#hash">Hash</a> des vorherigen Blocks <!-- .element: class="fragment" -->
+              * Dadurch: <!-- .element: class="fragment" -->
+                * Reihenfolge fix <!-- .element: class="fragment" -->
+                * Alte Blöcke nicht veränderbar<br> <!-- .element: class="fragment" -->
+                  <small>(Außer man würde alle nachfolgenden Blöcke neu erstellen)</small> <!-- .element: class="fragment" -->
+            </textarea>
+          </section>
+          <section data-markdown id="hash">
+            <textarea data-template>
+              ### Was ist ein Hash?
+              * to hash = zerhacken<!-- .element: class="fragment" -->
+              * Beispiel: <!-- .element: class="fragment" -->
+                * <!-- .element: class="fragment" --> <small><code>sha256('Donau-Dampfschifffahrts-Kapitäns-Kajüte')</code> →</small>  
+                <small>f0495a6ea8ed2c2c75944d4a50beec935749b63027f0467fe9403508a0d534c8</small>
+                * <!-- .element: class="fragment" --> <small><code>sha256('Donau-Dampfschiffahrts-Kapitäns-Kajüte')</code> →</small>  
+                <small>c06f64a513b206964f25dcbc43aab1b77296d24c8c17f6f735272f864aed3c16</small>
+              * Nicht umkehrbar<!-- .element: class="fragment" -->
+              * Deterministisch:  <!-- .element: class="fragment" -->  
+              <small>gleiche Eingabe liefert immer gleiches Ergebnis</small>
+              * Hohe Konfusion:  <!-- .element: class="fragment" -->  
+              <small>kleine Änderung bewirkt großen Unterschied</small>
+            </textarea>
+          </section>
         </section>
         <section data-markdown>
           <textarea data-template>
