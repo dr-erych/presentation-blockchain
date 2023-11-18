@@ -56,12 +56,30 @@
 						</p>
 					</section>
 
-					<section data-background="#fddb32">
-						<img src="img/ottakringerbeer.jpg" alt="Ottakringer Bier" width="300">
+          <section data-background="#fddb32">
 						<p>
-							wohnt im 16. Wiener Bezirk,
+							war Head of Development bei
 						</p>
+            <br>
+            <div>
+              <div>
+                <img src="img/mmcagentur.png" alt="MMCAGENTUR" width="250">
+                <div><small>einer Online-Agentur</small></div>
+              </div>
+              <br>
+              <div>
+                <img src="img/farmdok.svg" alt="Farmdok" width="250">
+                <div><small>und einem Agrar-Tech Startup,</small></div>
+              </div>
+            </div>
 					</section>
+
+					<!--<section data-background="#74954B">
+						<img src="img/gusswerkglutenfree.png" alt="Gusswerk Glutenfreies Bier" width="300" height="300" style="object-fit: contain; background-color: #343434;">
+						<p>
+              trinkt nur mehr glutenfreies Bier
+						</p>
+					</section>-->
 
 					<section data-background="#212529">
 						<p>
@@ -92,7 +110,7 @@
             * Zentralbanken und Politik nehmen Einfluss <!-- .element: class="fragment" -->
             * Mehr Geld kann einfach gedruckt werden <!-- .element: class="fragment" -->
             * Inflation 🤑🤑🤑 <!-- .element: class="fragment" -->
-            * Autoritäre Regime können Geld konfiszieren <!-- .element: class="fragment" -->
+            * Autoritäre Regime können Zugang beschränken <!-- .element: class="fragment" -->
           </textarea>
         </section>
         <section data-markdown>
@@ -110,10 +128,14 @@
             ## Wer hat's erfunden?
           </textarea>
         </section>
-        <section data-markdown>
+        <section data-transition="slide-in fade-out">
+          <h2>Satoshi Nakamoto</h2>
+          <img src="img/dorian-nakamoto.jpeg" alt="Dorian Satoshi Nakamoto" width="400">
+        </section>
+        <section data-transition="fade-in slide-out" data-markdown>
           <textarea data-template>
             ## Satoshi Nakamoto
-            <small>Der/die Erfinder von Bitcoin</small>
+            <small>Der/die Erfinder/innen von Bitcoin</small>
             * Hat 2008 das Bitcoin Whitepaper veröffentlicht <!-- .element: class="fragment" -->
             * 2009 die erste Version des Bitcoin Core <!-- .element: class="fragment" -->
             * Identität ungeklärt, Einzelperson oder Personengruppe? <!-- .element: class="fragment" -->
@@ -148,14 +170,14 @@
             * Teilnehmende Computer heißen Nodes <!-- .element: class="fragment" -->
             * Jeder kann teilnehmen <!-- .element: class="fragment" -->
             * Jeder Node hat eine Kopie der ganzen Blockchain <!-- .element: class="fragment" -->
-            * Nodes validieren die Blockchain <!-- .element: class="fragment" -->
-            * Distributed trust model <!-- .element: class="fragment" -->
+            * Alle Nodes validieren die Blockchain <!-- .element: class="fragment" -->
+            
+            = Distributed trust model <!-- .element: class="fragment" -->
           </textarea>
         </section>
         <section data-markdown>
           <textarea data-template>
-            ## Wie funktioniert sie?
-            * Konsens: Gesamtes Netzwerk stimmt einer gemeinsamen Realität zu <!-- .element: class="fragment" -->
+            * Konsens: Gesamtes Netzwerk stimmt einer gemeinsamen Realität zu
             * Jede Transaktion wird für immer gespeichert und an alle verteilt <!-- .element: class="fragment" -->
               * Verlauf kann nicht verändert werden <!-- .element: class="fragment" -->
               * Kann nicht zweimal getätigt werden <!-- .element: class="fragment" -->
@@ -171,6 +193,9 @@
             * Definierte Maximalgröße<br> <!-- .element: class="fragment" -->
               <small>Bei Bitcoin: 1 MB</small>
           </textarea>
+        </section>
+        <section>
+          <a href="https://mempool.space" target="_blank">Block Explorer</a>
         </section>
         <section>
           <section data-markdown id="how-chained">
@@ -253,7 +278,7 @@
         <section data-markdown data-background="linear-gradient(to bottom, #81a6f7, black)">
           <textarea data-template>
             ### Proof of stake
-            <small>Beispiele: **Solana**, **Cardano**</small>
+            <small>Beispiel: **Ethereum** (seit 09/2022)</small>
             * Es gibt keine Miner, sondern Validatoren. <!-- .element: class="fragment" -->
             * Wer den nächsten Block validieren und an die Blockchain hängen möchte, muss Coins staken. <!-- .element: class="fragment" -->
             * Staken = Coins hinterlegen/sperren (ähnlich einer Kaution). <!-- .element: class="fragment" -->
@@ -261,10 +286,9 @@
         </section>
         <section data-markdown data-background="linear-gradient(to bottom, #81a6f7, black)">
           <textarea data-template>
-            * Wer am meisten staked (oder am längsten gestaked hat etc.), kommt wahrscheinlicher zum Zug.
-            * Bspw. Cardano hat zusätzlich einen Zufallsmechanismus, der wohlhabendere Staker nicht immer bevorzugt. <!-- .element: class="fragment" -->
+            * Ein Zufallsalgorithmus bestimmt, welcher Validator den nächsten Block anhängt.
             * Belohnung: Transaktionsgebühren, keine neuen Coins <!-- .element: class="fragment" -->
-            * Wer invalide Transaktionen in den Block aufnimmt, verliert seine gestakten Coins (oder einen Teil davon). <!-- .element: class="fragment" -->
+            * Wer invalide Transaktionen in den Block aufnimmt, verliert seine gestakten Coins. <!-- .element: class="fragment" -->
           </textarea>
         </section>
         <section data-markdown data-background="linear-gradient(to bottom, #FE7F2D, black)">
@@ -292,8 +316,7 @@
             #### Nachteile
             * Man benötigt bereits vorab Coins, um staken zu können. <!-- .element: class="fragment" -->
             * Pre-Mining nötig (oder Vorab-Verteilung von Startguthaben) <!-- .element: class="fragment" -->
-            * Wer großes Coin-Vermögen hat, wird bevorzugt. <!-- .element: class="fragment" -->
-              * (In welcher Form genau, hängt vom Algorithmus der jew. Blockchain ab.) <!-- .element: class="fragment" -->
+            * Vermögen wird nie aufgebraucht. <!-- .element: class="fragment" -->
             * "Nothing at stake" Problem <!-- .element: class="fragment" -->
           </textarea>
         </section>
@@ -303,15 +326,9 @@
             #### Vorteile
             * Wesentlich niedrigerer Energieaufwand <!-- .element: class="fragment" -->
             * Keine spezielle Hardware nötig <!-- .element: class="fragment" -->
-          </textarea>
-        </section>
-        <section data-markdown data-background="linear-gradient(to bottom, #81a6f7, black)">
-          <textarea data-template>
-            ### Proof of stake
-            #### Fun fact
-            Ethereum wird mit Ethereum 2.0 von Proof of Work auf Proof of Stake umsteigen.
-
-            Der Release ("The Merge") wurde schon mehrfach verschoben. Derzeit ist 2023 angepeilt. <!-- .element: class="fragment" -->
+            **** <!-- .element: class="fragment" -->
+            #### Vor- oder Nachteil? <!-- .element: class="fragment" -->
+            * "Passives" Einkommen. <!-- .element: class="fragment" -->
           </textarea>
         </section>
         <section data-markdown>
@@ -455,19 +472,24 @@
             ## Zukunft
             ### Ethereum<!-- .element: class="fragment" -->
             * Plattform für zahlreiche Anwendungen<!-- .element: class="fragment" -->
-            * Nicht ganz so dezentral wie Bitcoin<!-- .element: class="fragment" -->
-            * Mit Ethereum 2.0 sollen die Skalierungsprobleme gelöst<!-- .element: class="fragment" -->
-            * ... und auf Proof of Stake umgestellt werden<!-- .element: class="fragment" --> 
+            * Wird von der Ethereum Foundation verwaltet<!-- .element: class="fragment" -->
+            * Diese hat starken Einfluss auf die Software<!-- .element: class="fragment" -->
+            * Nicht so dezentral wie Bitcoin<!-- .element: class="fragment" -->
           </textarea>
         </section>
-        <section data-markdown>
-          <textarea data-template>
-            ### Bitcoin<!-- .element: class="fragment" -->
-            * Es wird maximal 21 Millionen Bitcoin geben<!-- .element: class="fragment" -->
-            * Mining reward wird ca. alle 4 Jahre halbiert<!-- .element: class="fragment" -->
-            * Ca. 2140 wird der letzte Satoshi (= 0,00000001 BTC) gemint<!-- .element: class="fragment" -->
-            * Skalierungsproblem -> Lightning Network ⚡<!-- .element: class="fragment" -->
-          </textarea>
+        <section>
+          <section data-markdown>
+            <textarea data-template>
+              ### Bitcoin
+              * Es wird maximal 21 Millionen Bitcoin geben<!-- .element: class="fragment" -->
+              * Mining reward wird ca. alle 4 Jahre halbiert<!-- .element: class="fragment" -->
+              * Ca. 2140 wird der letzte Satoshi (= 0,00000001 BTC) gemint<!-- .element: class="fragment" -->
+              * Skalierungsproblem -> Lightning Network ⚡<!-- .element: class="fragment" -->
+            </textarea>
+          </section>
+          <section>
+            <img src="img/node_mesh_network_lightning.svg" alt="" width="700" style="background-color: white; padding: 10px; object-fit: contain;">
+          </section>
         </section>
 			</div>
 		</div>
